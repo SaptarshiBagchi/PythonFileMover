@@ -8,7 +8,7 @@ df = df['File Name'].values.tolist()
 print(df)
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-
+os.mkdir('moved')
 for root, dirs, files in os.walk(dir_path):
     for file in files:
         if str(file) in df:
